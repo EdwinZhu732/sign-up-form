@@ -3,6 +3,7 @@
 
 body{
     display: flex;
+    background-color:rgb(116, 175, 136);
 }
 
 #right{
@@ -47,12 +48,25 @@ body{
     height: 98vh;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 #left > .top{
     font-family: Terraria;
     font-size: 24px;
-    height: 29%;
-    padding: 72px 160px 0 30px;
-    background-color: rgba(0, 99, 247, 0.815);
+    height: 20%;
+    padding: 48px 160px 12px 30px;
+    background-color: rgba(37, 84, 238, 0.459);
+}
+
+#left > .middle{
+    height: 45%;
+    background-color:rgb(116, 175, 136);
+    box-shadow: 0px 1px 4px black;
+    position:relative;
+}
+
+#left > .bottom{
+    height: 30%;
+    background-color: rgb(12, 126, 50);
 }
