@@ -1,21 +1,33 @@
 const pass = document.querySelector("#user_pass");
 const confirmPass = document.querySelector("#confirm_pass");
+const createButton = document.querySelector("#create");
 
-pass.addEventListener('input', () =>{
+createButton.addEventListener('click', () =>{
     if (pass.value !== confirmPass.value){
-        pass.setCustomValidity("Passwords need to match");                
+        confirmPass.setCustomValidity("Passwords need to match");                
     }
     else{
-        pass.setCustomValidity("");
+        confirmPass.setCustomValidity("");
     }
 });
 
-
 confirmPass.addEventListener('input', () =>{
     if (pass.value !== confirmPass.value){
-        pass.setCustomValidity("Passwords need to match");                
+        confirmPass.style.borderColor = "red";
+        
     }
     else{
-        pass.setCustomValidity("");
+        confirmPass.style.borderColor = "blue";
+        pass.style.borderColor = "blue";
+    }
+});
+
+pass.addEventListener('input', () =>{
+    if (pass.value !== confirmPass.value){
+        confirmPass.style.borderColor = "red";
+    }
+    else{
+        confirmPass.style.borderColor = "blue";
+        pass.style.borderColor = "blue";
     }
 });
